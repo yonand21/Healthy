@@ -1,0 +1,96 @@
+.about-title h1{
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  text-shadow: 2px 2px 7px #111111;
+  color: #ffffff;
+  background-color: #24a5b7;
+  margin-bottom: 20px;
+}
+
+.container1 {
+  
+  max-width: 1200px;
+  background-color: #fcfcfc;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 2px 2px 7px #111111;
+  background-color: #24a5b7;
+  color: #ffffff;
+
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10%;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 250px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 0px;
+
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 15px;
+}
+.card h3 {
+  margin: 0;
+  font-size: 7px;
+}
+
+.card p {
+  margin: 0;
+  color: #888888;
+  font-size: 10px;
+}
+
+.card .social-icons {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 100px;
+  height: 59px;
+  left: 55px;
+  bottom: -50px;
+  justify-content: space-between;
+}
+
+.card .social-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
