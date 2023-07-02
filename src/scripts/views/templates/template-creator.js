@@ -7,7 +7,7 @@ const createArtikelItemTemplate = (artikel) => `
 src="${artikel.img}">
 </div>
 <div class="artikel-item-content">
-  <h2 id="artikel-title"><a href="${artikel.id}" role="button">${artikel.title}</a></h2>
+  <h2 id="artikel-title"><a href="${artikel.source}" role="button">${artikel.title}</a></h2>
   <p>${artikel.overview}</p>
 </div>
 </div>

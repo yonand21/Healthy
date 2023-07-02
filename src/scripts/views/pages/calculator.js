@@ -1,7 +1,7 @@
 const Calculator = {
-    async render() {
-      return `
-      <div class="divTable">
+  render() {
+    return `
+    <div class="divTable">
         <div class="divTableRow">
           <div class="divTableCellhd">BMI</div>
           <div class="divTableCellhd">Status Berat Badan</div>
@@ -38,21 +38,51 @@ const Calculator = {
         <P>
       </div>   
     </div>
-    <div class="calculator">
-      <h2>Calculator BMI</h2>
-      <p class="text">Height</p>
-      <input type="text" id="height">
-      <p class="text">Weight</p> 
-      <input type="text" id="weight">
-      <p id="result"></p>
-      <button id="btn" onclick="bmi()">Calculate</button>
-    </div>
-      `;
-    },
-    async afterRender() {
-      
-    },
-  };
-  
-  export default Calculator;
-  
+      <div class="container-calc">
+        <h1>BMI Calculator</h1>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight">
+        <br>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height">
+        <br>
+        <button id="calculateBtn">Calculate BMI</button>
+        <br>
+        <div id="result"></div>
+      </div>
+    `;
+  },
+
+  afterRender() {
+    const calculateBtn = document.getElementById("calculateBtn");
+    calculateBtn.addEventListener("click", this.calculateBMI);
+  },
+
+  calculateBMI() {
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value) / 100; // Convert height to meters
+
+    if (isNaN(weight) || isNaN(height)) {
+      document.getElementById("result").innerHTML = "Please enter valid values.";
+      return;
+    }
+
+    const bmi = weight / (height * height);
+
+    let result = "Your BMI is " + bmi.toFixed(2) + ". ";
+
+    if (bmi < 18.5) {
+      result += "You are underweight.";
+    } else if (bmi >= 18.5 && bmi < 25) {
+      result += "You are in the normal weight range.";
+    } else if (bmi >= 25 && bmi < 30) {
+      result += "You are overweight.";
+    } else {
+      result += "You are obese.";
+    }
+
+    document.getElementById("result").innerHTML = result;
+  },
+};
+
+export default Calculator;

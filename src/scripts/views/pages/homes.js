@@ -17,7 +17,9 @@ const Home = {
           dengan hal-hal yang praktis. Untuk itu, kami menyediakan laman ini
           untuk menunjang kebutuhan informasi mengenai pola hidup sehat.
         </p>
-        <button class="selengkapnya">Selengkapnya...</button>
+        <a href="#/article">
+  <button class="selengkapnya">Selengkapnya...</button>
+</a>
       </div>
       
     </div>
